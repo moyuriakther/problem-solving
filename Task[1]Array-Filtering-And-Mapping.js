@@ -56,7 +56,32 @@ console.log(persons);
 // 6.Task: Array Reduction
 const numbers = [12, 1, 3, 10, 14, 13, 18, 20, 22, 21, 26, 24];
 const sumOfEvenNumbers = (numbers) =>{
-  return numbers.reduce((acc, curr) =>  curr % 2 === 0 ? acc + curr : acc, 0);
+  return numbers.reduce((acc, curr) =>  curr%2 === 0 ? acc + curr : acc, 0);
 }
 const result6 = sumOfEvenNumbers(numbers);
 console.log(result6)
+
+// 7.  Task: Leap Year Checker
+const leapYear = (year) =>{
+  if(year%400 == 0 || year%100 !=0 && year%4 == 0){
+    console.log(`${year} is a Happy New Year`);
+  }else{
+    console.log('Not A Leap Year');
+  }
+}
+leapYear(2000);
+
+// 8. Task: Unique Values
+const numbersWithDuplicates = [1, 2, 3, 4, 5, 2, 3, 6, 7, 8, 5, 9, 10, 8, 6];
+const uniqueNumbers = (numbers) =>{
+  return [...new Set(numbers)]
+}
+const result8 = uniqueNumbers(numbersWithDuplicates)
+console.log(result8);
+// 09. Task: Find Maximum Value:
+const maxNumber = (numbers) =>{
+ const res = Math.max(...numbers);
+ return res
+}
+const result9 = maxNumber(numbers)
+console.log(result9)
